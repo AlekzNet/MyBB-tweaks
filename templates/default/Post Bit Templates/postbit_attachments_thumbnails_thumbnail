@@ -1,0 +1,1 @@
+<a href="attachment.php?aid={$attachment['aid']}" class="highslide" onclick="return hs.expand(this)"><img src="{$mybb->settings['uploadspath']}/{$attachment['thumbnail']}" class="attachment" alt="{$attachment['filename']} thumbnail" title="{$attachment['filename']}" /></a>&nbsp;&nbsp;&nbsp;
