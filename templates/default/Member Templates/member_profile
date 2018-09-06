@@ -68,22 +68,6 @@
 <td class="{$bgcolors['pm']}"><strong>{$lang->pm}</strong></td>
 <td class="{$bgcolors['pm']}"><a href="private.php?action=send&amp;uid={$memprofile['uid']}">{$lang->send_pm}</a></td>
 </tr>
-<tr>
-<td class="{$bgcolors['icq']}"><strong>{$lang->icq_number}</strong></td>
-<td class="{$bgcolors['icq']}">{$memprofile['icq']}</td>
-</tr>
-<tr>
-<td class="{$bgcolors['aim']}"><strong>{$lang->aim_screenname}</strong></td>
-<td class="{$bgcolors['aim']}"><a href="javascript:;" onclick="MyBB.popupWindow('misc.php?action=imcenter&amp;imtype=aim&amp;uid={$uid}', 'imcenter', 450, 300);">{$memprofile['aim']}</a></td>
-</tr>
-<tr>
-<td class="{$bgcolors['yahoo']}"><strong>{$lang->yahoo_id}</strong></td>
-<td class="{$bgcolors['yahoo']}"><a href="javascript:;" onclick="MyBB.popupWindow('misc.php?action=imcenter&amp;imtype=yahoo&amp;uid={$uid}', 'imcenter', 450, 300);">{$memprofile['yahoo']}</a></td>
-</tr>
-<tr>
-<td class="{$bgcolors['msn']}"><strong>{$lang->msn}</strong></td>
-<td class="{$bgcolors['msn']}"><a href="javascript:;" onclick="MyBB.popupWindow('misc.php?action=imcenter&amp;imtype=msn&amp;uid={$uid}', 'imcenter', 450, 300);">{$memprofile['msn']}</a></td>
-</tr>
 </table>
 </td>
 <td><img src="{$theme['imgdir']}/pixel.gif" height="1" width="8" alt=""/></td>
