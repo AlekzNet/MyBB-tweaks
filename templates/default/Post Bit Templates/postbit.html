@@ -1,6 +1,6 @@
-{$ignore_bit}
+{$ignore_bit}{$deleted_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
-<div class="post{$post['styleclass']} {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
+<div class="post {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
 <div class="post_author">
 	{$post['useravatar']}
 	<div class="author_information">
@@ -33,7 +33,7 @@
 	<div class="postbit_buttons author_buttons float_left">
 		{$post['button_email']}{$post['button_pm']}{$post['button_www']}{$post['button_find']}{$post['button_rep']}
 	</div>
-	<div class="postbit_buttons  post_management_buttons float_right">
+	<div class="postbit_buttons post_management_buttons float_right">
 		{$post['button_tyl']}{$post['button_edit']}{$post['button_quickdelete']}{$post['button_quickrestore']}{$post['button_quote_fast']}{$post['button_quote']}{$post['button_multiquote']}{$post['button_mention']}{$post['button_report']}{$post['button_warn']}{$post['button_purgespammer']}{$post['button_reply_pm']}{$post['button_replyall_pm']}{$post['button_forward_pm']}{$post['button_delete_pm']}
 	</div>
 </div>
