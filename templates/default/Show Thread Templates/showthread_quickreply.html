@@ -37,7 +37,7 @@
 					</div>
 					{$mention_quickreply}<div class="editor_control_bar" style="width: 95%; padding: 4px; margin-top: 3px; display: none;" id="quickreply_multiquote">
 						<span class="smalltext">
-							{$lang->quickreply_multiquote_selected} <a href="./newreply.php?tid={$tid}&amp;load_all_quotes=1" onclick="return Thread.loadMultiQuoted();">{$lang->quickreply_multiquote_now}</a> {$lang->or} <a href="javascript:Thread.clearMultiQuoted();">{$lang->quickreply_multiquote_deselect}</a>.
+							{$lang->quickreply_multiquote_selected} <a href="./newreply.php?tid={$tid}&amp;load_all_quotes=1" onclick="return Thread.loadMultiQuoted();">{$lang->quickreply_multiquote_now}</a> {$lang->or} <a href="javascript:void(0)" onclick="Thread.clearMultiQuoted(); return false;">{$lang->quickreply_multiquote_deselect}</a>.
 						</span>
 					</div>
 				</td>
