@@ -18,12 +18,15 @@
 	lang.quick_restore_error = "{$lang->quick_restore_error}";
 	lang.quick_restore_success = "{$lang->quick_restore_success}";
 	lang.editreason = "{$lang->postbit_editreason}";
+	lang.post_deleted_error = "{$lang->post_deleted_error}";
+	lang.softdelete_thread = "{$lang->soft_delete_thread}";
+	lang.restore_thread = "{$lang->restore_thread}";	
 // -->
 </script>
 <!-- jeditable (jquery) -->
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1804"></script>
 <script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1804"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1813"></script>
 
 <script type="text/javascript">
 <!--
@@ -128,9 +131,9 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 	<br />
 	<div class="float_left">
 		<ul class="thread_tools">
-			<li class="printable"><a href="printthread.php?tid={$tid}">{$lang->view_printable}</a></li>
+			{$printthread}
 			{$sendthread}
-			<li class="subscription_{$add_remove_subscription}"><a href="usercp2.php?action={$add_remove_subscription}subscription&amp;tid={$tid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a></li>
+			{$addremovesubscription}
 			{$addpoll}<!-- MyLast -->{$mylastpostlink}<!-- /MyLast -->
 		</ul>
 	</div>
@@ -155,6 +158,12 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 		$(".author_avatar img").error(function () {
 			$(this).unbind("error").closest('.author_avatar').remove();
 		});
+		var thread_deleted = "{$thread_deleted}";
+		if(thread_deleted == "1")
+		{
+			$("#quick_reply_form, .new_reply_button, .thread_tools, .inline_rating").hide();
+			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
+		}		
 	</script>
 <div id="text_right"><div id="elist"></div></div>	
 	
