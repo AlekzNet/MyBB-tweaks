@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>{$mybb->settings['bbname']}</title>
+{$headerinclude}
+<script type="text/javascript">
+<!--
+	lang.no_new_posts = "{$lang->no_new_posts}";
+	lang.click_mark_read = "{$lang->click_mark_read}";
+// -->
+</script>
+</head>
+<body  onload=pics()>
+{$header}
+{$itph}	
+<table width="100%"  border="0">
+  <tr>
+    <td width="75%" valign="top">{$forums}</td>
+    <td width="25%" valign="top" style="padding-left: 12px;">{$sb_welcome}{$sb_search}{$sb_stats}{$sb_latestthreads}{$sb_additional}</td>
+  </tr>
+</table>
+{$itpf}	
+<br class="clear" />	
+{$boardstats}
+{$footer}
+<div id="text_right"><div id="elist"></div></div>
+</body>
+</html>
