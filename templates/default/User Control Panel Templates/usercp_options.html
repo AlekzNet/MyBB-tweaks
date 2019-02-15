@@ -39,18 +39,10 @@
 <td valign="top" width="1"><input type="checkbox" class="checkbox" name="hideemail" id="hideemail" value="1" {$hideemailcheck} /></td>
 <td><span class="smalltext"><label for="hideemail">{$lang->allow_emails}</label></span></td>
 </tr>
+{$pms}
 <tr>
-<td valign="top" width="1"><input type="checkbox" class="checkbox" name="receivepms" id="receivepms" value="1" {$receivepmscheck} /></td>
-<td><span class="smalltext"><label for="receivepms">{$lang->receive_pms}</label></span></td>
-</tr>
-{$pms_from_buddys}
-<tr>
-<td valign="top" width="1"><input type="checkbox" class="checkbox" name="pmnotice" id="pmnotice" value="1"{$pmnoticecheck} /></td>
-<td><span class="smalltext"><label for="pmnotice">{$lang->pm_notice}</label></span></td>
-</tr>
-<tr>
-<td valign="top" width="1"><input type="checkbox" class="checkbox" name="pmnotify" id="pmnotify" value="1" {$pmnotifycheck} /></td>
-<td><span class="smalltext"><label for="pmnotify">{$lang->pm_notify}</label></span></td>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="buddyrequestsauto" id="buddyrequestsauto" value="1" {$buddyrequestsautocheck} /></td>
+<td><span class="smalltext"><label for="buddyrequestsauto">{$lang->buddyrequests_auto}</label></span></td>
 </tr>
 <tr>
 <td colspan="2"><span class="smalltext"><label for="subscriptionmethod">{$lang->subscription_method}</label></span></td>
@@ -58,9 +50,10 @@
 <tr>
 <td colspan="2">
 	<select name="subscriptionmethod" id="subscriptionmethod">
-		<option value="0" {$no_subscribe_selected}>{$lang->no_auto_subscribe}</option>
-		<option value="1" {$no_email_subscribe_selected}>{$lang->no_email_subscribe}</option>
+		<option value="0" {$no_auto_subscribe_selected}>{$lang->no_auto_subscribe}</option>
+		<option value="1" {$no_subscribe_selected}>{$lang->no_subscribe}</option>
 		<option value="2" {$instant_email_subscribe_selected}>{$lang->instant_email_subscribe}</option>
+		<option value="3" {$instant_pm_subscribe_selected}>{$lang->instant_pm_subscribe}</option>
 	</select>
 </td>
 </tr>
@@ -77,6 +70,7 @@
 <tr>
 <td>
 <select name="dateformat">
+<option value="0">{$lang->use_default}</option>
 {$date_format_options}
 </select>
 </td>
@@ -87,6 +81,7 @@
 <tr>
 <td>
 <select name="timeformat">
+<option value="0">{$lang->use_default}</option>
 {$time_format_options}
 </select>
 </td>
@@ -155,6 +150,14 @@
 	<td><span class="smalltext"><label for="classicpostbit">{$lang->show_classic_postbit}</label></span></td>
 	</tr>
 <tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showimages" id="showimages" value="1" {$showimagescheck} /></td>
+<td><span class="smalltext"><label for="showimages">{$lang->show_images}</label></span></td>
+</tr>
+<tr>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showvideos" id="showvideos" value="1" {$showvideoscheck} /></td>
+<td><span class="smalltext"><label for="showvideos">{$lang->show_videos}</label></span></td>
+</tr>
+<tr>
 <td valign="top" width="1"><input type="checkbox" class="checkbox" name="showsigs" id="showsigs" value="1" {$showsigscheck} /></td>
 <td><span class="smalltext"><label for="showsigs">{$lang->show_sigs}</label></span></td>
 </tr>
@@ -162,10 +165,7 @@
 <td valign="top" width="1"><input type="checkbox" class="checkbox" name="showavatars" id="showavatars" value="1" {$showavatarscheck} /></td>
 <td><span class="smalltext"><label for="showavatars">{$lang->show_avatars}</label></span></td>
 </tr>
-<tr>
-<td valign="top" width="1"><input type="checkbox" class="checkbox" name="showquickreply" id="showquickreply" value="1" {$showquickreplycheck} /></td>
-<td><span class="smalltext"><label for="showquickreply">{$lang->show_quick_reply}</label></span></td>
-</tr>
+{$quick_reply}
 {$pppselect}
 <tr>
 <td colspan="2"><span class="smalltext">{$lang->thread_mode}</span></td>
@@ -188,17 +188,11 @@
 <td><span class="smalltext"><label for="showcodebuttons">{$lang->show_codebuttons}</label></span></td>
 </tr>
 <tr>
-<td colspan="2"><span class="smalltext">{$lang->style}</span></td>
+<td valign="top" width="1"><input type="checkbox" class="checkbox" name="sourceeditor" id="sourceeditor" value="1" {$sourcemodecheck} /></td>
+<td><span class="smalltext"><label for="sourceeditor">{$lang->source_editor}</label></span></td>
 </tr>
-<tr>
-<td colspan="2">{$stylelist}</td>
-</tr>
-<tr>
-<td colspan="2"><span class="smalltext">{$lang->board_language}</span></td>
-</tr>
-<tr>
-<td colspan="2"><select name="language"><option value="">{$lang->use_default}</option><option value="0">-----------</option>{$langoptions}</select></td>
-</tr>
+{$board_style}
+{$board_language}
 </table>
 </fieldset>
 </td>
