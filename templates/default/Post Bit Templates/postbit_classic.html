@@ -1,10 +1,10 @@
-{$ignore_bit}
+{$ignore_bit}{$deleted_bit}
 <a name="pid{$post['pid']}" id="pid{$post['pid']}"></a>
 <div class="post classic {$unapproved_shade}" style="{$post_visibility}" id="post_{$post['pid']}">
 <div class="post_author scaleimages">
 	{$post['useravatar']}
 	<div class="author_information">
-			<strong><span class="largetext">{$post['profilelink']}</span></strong><br />
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
 			<span class="smalltext">
 				{$post['usertitle']}<br />
 			</span>
@@ -13,10 +13,10 @@
 		{$post['user_details']}
 	</div>
 </div>
-<div class="post_content">
+<div class="post_content{$post['styleclass']}">
 	<div class="post_head">
 		{$post['posturl']}
-		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}</span></span>
+		<span class="post_date">{$post['postdate']} <span class="post_edit" id="edited_by_{$post['pid']}">{$post['editedmsg']}{$post['edithistory']}</span></span>
 	{$post['subject_extra']}
 	</div>
 	<div class="post_body scaleimages" id="pid_{$post['pid']}">
@@ -26,6 +26,9 @@
 	{$post['signature']}
 	<div class="post_meta" id="post_meta_{$post['pid']}">
 		{$post['iplogged']}
+				<div class="float_right">
+			{$post['poststatus']}
+		</div>
 	</div>
 </div>
 <div style="{$post['tyl_display']}" id="tyl_{$post['pid']}">{$post['thankyoulike_data']}</div>
