@@ -1,0 +1,20 @@
+<td width="{$lang->ucp_nav_width}" valign="top">
+<table border="0" cellspacing="{$theme['borderwidth']}" cellpadding="{$theme['tablespace']}" class="tborder">
+	<tr>
+		<td class="thead"><strong>{$lang->ucp_nav_menu}</strong></td>
+	</tr>
+	<tr>
+		<td class="trow1 smalltext"><a href="usercp.php" class="usercp_nav_item usercp_nav_home">{$lang->ucp_nav_home}</a></td>
+	</tr>
+{$usercpmenu}
+<tr>
+	<td class="tcat">
+		<div class="expcolimage"><img src="{$theme['imgdir']}/collapse{$collapsedimg['usercpgames']}.png" id="usercpgames_img" class="expander" alt="[-]" title="[-]" /></div>
+		<div><span class="smalltext"><strong>{$lang->gamesection}</strong></span></div>
+	</td>
+</tr>
+<tbody style="{$collapsed['usercpgames_e']}" id="usercpgames_e">
+	<tr><td class="trow1 smalltext"><a href="games.php?action=settings" class="usercp_nav_item usercp_nav_options">{$lang->your_settings}</a></td></tr>
+</tbody>
+</table>
+</td>
