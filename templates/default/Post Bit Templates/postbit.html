@@ -4,7 +4,7 @@
 <div class="post_author">
 	{$post['useravatar']}
 	<div class="author_information">
-			<strong><span class="largetext">{$post['profilelink']}</span></strong><br />
+			<strong><span class="largetext">{$post['profilelink']}</span></strong> {$post['onlinestatus']}<br />
 			<span class="smalltext">
 				{$post['usertitle']}<br />
 			</span>
@@ -26,6 +26,9 @@
 	{$post['signature']}
 	<div class="post_meta" id="post_meta_{$post['pid']}">
 		{$post['iplogged']}
+				<div class="float_right">
+			{$post['poststatus']}
+		</div>
 	</div>
 </div>
 <div style="{$post['tyl_display']}" id="tyl_{$post['pid']}">{$post['thankyoulike_data']}</div>
