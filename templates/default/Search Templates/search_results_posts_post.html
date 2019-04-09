@@ -9,7 +9,7 @@
 	</td>
 	<td align="center" class="{$bgcolor}">{$post['profilelink']}</td>
 	<td class="{$bgcolor}" >{$post['forumlink']}</td>
-	<td align="center" class="{$bgcolor}"><a href="javascript:void(0)" onclick="MyBB.whoPosted({$post['tid']}); return false;">{$post['thread_replies']}</a></td>
+	<td align="center" class="{$bgcolor}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$post['tid']}"  onclick="MyBB.whoPosted({$post['tid']}); return false;">{$post['thread_replies']}</a></td>
 	<td align="center" class="{$bgcolor}">{$post['thread_views']}</td>
 	<td class="{$bgcolor}" style="white-space: nowrap; text-align: center;"><span class="smalltext">{$posted}</span></td>
 	{$inline_mod_checkbox}
