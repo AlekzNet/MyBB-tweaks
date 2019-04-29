@@ -1,0 +1,36 @@
+<script type="text/javascript" src="{$mybb->settings['bburl']}/highslide/highslide-with-gallery.packed.js"></script>
+<script type="text/javascript">
+<!--
+hs.graphicsDir = '{$mybb->settings['bburl']}/highslide/graphics/';
+hs.align = 'center';
+hs.showCredits = false;
+hs.allowSizeReduction = true;
+hs.allowMultipleInstances = false;
+hs.transitions = ['expand', 'crossfade'];
+hs.fullExpandPosition = 'bottom left';
+hs.captionEval = 'this.thumb.title';
+hs.captionOverlay.position = 'above';
+hs.outlineType = '{$mybb->settings['highslide_theme']}';
+hs.wrapperClassName = 'dark borderless';
+hs.numberPosition = 'caption';
+hs.dimmingOpacity = 0.75;
+hs.numberOfImagesToPreload = 0;
+
+// Add the controlbar
+if (hs.addSlideshow) hs.addSlideshow({
+//slideshowGroup: 'group1',
+interval: 3000,
+repeat: false,
+useControls: true,
+fixedControls: 'fit',
+overlayOptions: {
+className: 'dark',	
+opacity: .75,
+position: 'below',
+offsetX: 50,
+offsetY: -15,
+hideOnMouseOut: false
+}
+});
+//-->
+</script>
