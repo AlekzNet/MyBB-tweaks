@@ -24,9 +24,9 @@
 // -->
 </script>
 <!-- jeditable (jquery) -->
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1821"></script>
 <script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1820"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1821"></script>
 
 <!-- start: FastQuote -->
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/fastQuote.js"></script>
@@ -35,9 +35,8 @@ var form_name = '{$mybb->settings['fastQuoteFormName']}';
 var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 </script>
 <!-- end: FastQuote -->
-
-{$mention_script}
 	
+{$mention_script}
 
 <script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/thankyoulike.min.js"></script>
 <script type="text/javascript">
@@ -68,7 +67,7 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 					<span class="smalltext"><strong><a href="showthread.php?tid={$tid}" >Perm link</a>{$threadnoteslink}</strong></span>
 				</div>
 				<div>
-					<strong>{$thread['threadprefix']}{$thread['subject']}</strong>
+					<strong>{$thread['displayprefix']}{$thread['subject']}</strong>
 				</div>
 			</td>
 		</tr>
