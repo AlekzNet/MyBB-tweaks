@@ -4,9 +4,8 @@
 <link rel="alternate" type="application/rss+xml" title="{$lang->latest_announcements} (RSS 2.0)" href="{$mybb->settings['bburl']}/syndication.php?portal=1" />
 <link rel="alternate" type="application/atom+xml" title="{$lang->latest_announcements} (Atom 1.0)" href="{$mybb->settings['bburl']}/syndication.php?portal=1&type=atom1.0" />
 {$headerinclude}
-{$headerinclude}
 </head>
-<body  onload=pics()>
+<body>
 {$header}
 <table width="100%" cellspacing="0" cellpadding="{$theme['tablespace']}" border="0" align="center">
 <tr><td valign="top" width="200">
@@ -25,6 +24,8 @@
 </tr>
 </table>
 {$footer}
-<div id="text_right"><div id="elist"></div></div>	
+<div id="text_right"><div id="elist">
+		<?php include ($_SERVER["DOCUMENT_ROOT"]."/lib/eget.php"); ?>
+</div></div>
 </body>
 </html>
