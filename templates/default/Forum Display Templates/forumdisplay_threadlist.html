@@ -8,7 +8,7 @@
 	<tr>
 		<td class="thead" colspan="{$colspan}">
 			<div class="float_right">
-				<span class="smalltext"><strong><a href="misc.php?action=markread&amp;fid={$fid}{$post_code_string}">{$lang->markforum_read}</a> | <a href="usercp2.php?action={$add_remove_subscription}subscription&amp;type=forum&amp;fid={$fid}&amp;my_post_key={$mybb->post_code}">{$add_remove_subscription_text}</a>{$clearstoredpass}</strong></span>
+				<span class="smalltext"><strong><a href="misc.php?action=markread&amp;fid={$fid}{$post_code_string}">{$lang->markforum_read}</a>{$addremovesubscription}{$clearstoredpass}</strong></span>
 			</div>
 			<div>
 				<strong>{$foruminfo['name']}</strong>
@@ -79,7 +79,7 @@
 		<dl class="thread_legend smalltext">
 			<dd><span class="thread_status folder" title="{$lang->no_new_thread}">&nbsp;</span> {$lang->no_new_thread}</dd>
 			<dd><span class="thread_status dot_folder" title="{$lang->posts_by_you}">&nbsp;</span> {$lang->posts_by_you}</dd>
-			<dd><span class="thread_status lockfolder" title="{$lang->locked_thread}">&nbsp;</span> {$lang->locked_thread}</dd>
+			<dd><span class="thread_status closefolder" title="{$lang->closed_thread}">&nbsp;</span> {$lang->closed_thread}</dd>
 		</dl>
 	</div>
 	<br class="clear" />
