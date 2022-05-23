@@ -10,8 +10,8 @@
 	<td align="center" class="{$bgcolor}{$thread_type_class}"><a href="{$mybb->settings['bburl']}/misc.php?action=whoposted&tid={$thread['tid']}" onclick="MyBB.whoPosted({$thread['tid']}); return false;">{$thread['replies']}</a>{$unapproved_posts}</td>
 	<td align="center" class="{$bgcolor}{$thread_type_class}">{$thread['views']}</td>
 	<td class="{$bgcolor}{$thread_type_class}" style="white-space: nowrap; text-align: right;">
-		<span class="lastpost smalltext">{$lastpostdate}<br />
-		<a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>: {$lastposterlink}</span>
+		<span class="lastpost smalltext"><a href="{$thread['lastpostlink']}">{$lang->lastpost}</a>:<br />{$lastpostdate}<br />
+		 {$lastposterlink}</span>
 	</td>
 {$modbit}
 </tr>
