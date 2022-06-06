@@ -24,9 +24,9 @@
 // -->
 </script>
 <!-- jeditable (jquery) -->
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/report.js?ver=1820"></script>
 <script src="{$mybb->asset_url}/jscripts/jeditable/jeditable.min.js"></script>
-<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1821"></script>
+<script type="text/javascript" src="{$mybb->asset_url}/jscripts/thread.js?ver=1827"></script>
 
 <!-- start: FastQuote -->
 <script type="text/javascript" src="{$mybb->asset_url}/jscripts/fastQuote.js"></script>
@@ -35,22 +35,21 @@ var form_name = '{$mybb->settings['fastQuoteFormName']}';
 var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 </script>
 <!-- end: FastQuote -->
-	
-{$mention_script}
 
-<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/thankyoulike.min.js"></script>
+<script type="text/javascript" src="{$mybb->settings['bburl']}/jscripts/thankyoulike.min.js?ver=30309"></script>
 <script type="text/javascript">
 <!--
 	var tylEnabled = "{$mybb->settings['g33k_thankyoulike_enabled']}";
 	var tylDisplayGrowl = "{$mybb->settings['g33k_thankyoulike_displaygrowl']}";
 	var tylCollapsible = "{$mybb->settings['g33k_thankyoulike_collapsible']}";
+	var tylCollDefault = "{$mybb->settings['g33k_thankyoulike_colldefault']}";
 	var tylUser = "{$mybb->user['uid']}";
 	var tylSend = "{$lang->tyl_send}";
 	var tylRemove = "{$lang->tyl_remove}";
 // -->
 </script>
 </head>
-<body onload=pics()>
+<body>
 	{$header}
 	{$threadnotesbox}
 	{$pollbox}
@@ -101,7 +100,8 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 			{$printthread}
 			{$sendthread}
 			{$addremovesubscription}
-			{$addpoll}<!-- MyLast -->{$mylastpostlink}<!-- /MyLast -->
+			{$addpoll}
+			{$downloadthread}<!-- MyLast -->{$mylastpostlink}<!-- /MyLast -->
 		</ul>
 	</div>
 
@@ -110,7 +110,7 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 		{$forumjump}
 	</div>
 	<br class="clear" />
-	{$usersbrowsing}
+	{$usersbrowsing}{$ougc_threadcontributors_list}
 	{$footer}
 	<div id="thread_modes_popup" class="popup_menu" style="display: none;"><div class="popup_item_container"><a href="showthread.php?mode=linear&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->linear}</a></div><div class="popup_item_container"><a href="showthread.php?mode=threaded&amp;tid={$tid}&amp;pid={$pid}#pid{$pid}" class="popup_item">{$lang->threaded}</a></div></div>
 	<script type="text/javascript">
@@ -129,7 +129,8 @@ var text_name = '{$mybb->settings['fastQuoteFieldName']}';
 			$("#moderator_options_selector option.option_mirage").attr("disabled","disabled");
 		}
 	</script>
-<div id="text_right"><div id="elist"></div></div>	
-	
+<div id="text_right">
+		<?php include ($_SERVER["DOCUMENT_ROOT"]."/lib/eget.php"); ?>
+</div>
 </body>
 </html>
